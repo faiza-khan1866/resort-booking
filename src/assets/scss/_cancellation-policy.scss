@@ -1,0 +1,60 @@
+.cancellation-policy-wrapper {
+  .intro-block {
+    h3 {
+      text-transform: capitalize;
+      font-size: 28px;
+      margin-bottom: 1rem;
+      @media #{$sm} {
+        font-size: 24px;
+      }
+    }
+    h2.main-title {
+      font-family: $lora;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px;
+      padding: 0 0 2rem 0;
+      color: $eden;
+      @media #{$sm} {
+        font-size: 30px;
+        padding: 0 0 1rem 0;
+      }
+    }
+    @media #{$sm} {
+      padding: 0.5rem 0 !important;
+    }
+    .title-flex {
+      flex-direction: row;
+      padding-top: 2rem;
+      @media #{$sm} {
+        flex-direction: column-reverse;
+        padding-top: 0.5rem;
+      }
+    }
+    .intro-item {
+      // padding-top: 2rem;
+      h5,
+      h6 {
+        padding: 1rem 0;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: $para-color;
+      }
+    }
+
+    p {
+      color: $para-color;
+      font-family: $mont;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      &.download-para {
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+        color: $mine-shaft;
+        font-weight: 600;
+        font-family: $mont;
+      }
+    }
+  }
+}

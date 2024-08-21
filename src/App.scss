@@ -1,0 +1,68 @@
+@import "~bootstrap/scss/bootstrap";
+
+@import "./assets/scss/variables";
+@import "./assets/scss/mixin";
+@import "./assets/scss/common";
+@import "./assets/scss/header";
+@import "./assets/scss/banner";
+@import "./assets/scss/text-block";
+@import "./assets/scss/testimonial";
+@import "./assets/scss/news";
+@import "./assets/scss/booking-form";
+@import "./assets/scss/footer";
+@import "./assets/scss/room-slider";
+@import "./assets/scss/experience";
+@import "./assets/scss/guest-reviews";
+@import "./assets/scss/service-tabs";
+@import "./assets/scss/bottom-navigator";
+@import "./assets/scss/room-suites";
+@import "./assets/scss/dining";
+@import "./assets/scss/wedding-main";
+@import "./assets/scss/about-us";
+@import "./assets/scss/contact-us";
+@import "./assets/scss/dining-inner";
+@import "./assets/scss/leisure";
+@import "./assets/scss/sustainability";
+@import "./assets/scss/offers";
+@import "./assets/scss/spa-wellness";
+@import "./assets/scss/offers-inner";
+@import "./assets/scss/leisure-inner";
+@import "./assets/scss/rooms-inner";
+@import "./assets/scss/gallery";
+@import "./assets/scss/about-seychelles";
+@import "./assets/scss/privacy-policy";
+@import "./assets/scss/cancellation-policy";
+@import "./assets/scss/covid-policy";
+@import "./assets/scss/faq";
+@import "./assets/scss/error";
+
+body {
+  font-family: "Montserrat", serif;
+}
+
+.faq-section-block h6,
+.faq-section-block p {
+  font-size: 14px !important;
+}
+
+.container {
+  @media #{$md} {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  @media #{$lg} {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  @media #{$xl} {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  @media #{$xxl} {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

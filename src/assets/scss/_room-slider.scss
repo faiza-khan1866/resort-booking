@@ -1,0 +1,261 @@
+.room-slider-wrapper {
+    background-color: $white;
+
+    .section-title {
+        text-align: center;
+        //   color: $heading-color;
+        padding: 1rem;
+        font-family: "Lora", serif;
+        font-weight: 400;
+        width: 60%;
+        margin: auto;
+        font-size: 36px;
+        font-style: italic;
+    }
+
+    p {
+        text-align: center;
+        color: $nile-blue;
+        margin-bottom: 2rem;
+        font-size: 14px;
+        color: gray;
+    }
+
+    .room-carousel {
+        //   margin-top: 2rem;
+
+        .control-arrow {
+            background: $eden;
+            opacity: 1;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 28%;
+        }
+
+        .control-next {
+            right: 1%;
+        }
+
+        .control-prev {
+            left: 1%;
+        }
+
+        .slider-wrapper {
+            overflow: visible;
+        }
+
+        .slide {
+            background: #fff;
+            //   transform: scale(.8);
+            opacity: 0.5;
+
+            .room-image-wrapper {
+                height: 400px;
+                padding: 2.5rem;
+
+                @media #{$sm} {
+                    padding: 1.5rem;
+                    height: 250px;
+                }
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            h1 {
+                font-size: 24px;
+                font-family: $lora;
+                margin: 1rem 0;
+            }
+        }
+
+        ul {
+            li {
+                .slide-content {
+                    visibility: hidden;
+                    //   ul{
+                    //       li{
+                    //           font-size:13px;
+                    //       }
+                    //   }
+                }
+            }
+
+            .selected {
+                // transform: scale(1) !important;
+                //   margin: 0 2rem;
+                // margin: 0 0.5rem;
+                opacity: 1;
+
+                .room-image-wrapper {
+                    box-shadow: 0 0 16px #aaa;
+                    padding: 0.5rem;
+                }
+
+                .slide-content {
+                    visibility: visible;
+
+                    h1,
+                    h2 {
+                        color: $nile-blue;
+                        font-weight: 600;
+                    }
+
+                    ul {
+                        list-style-type: none;
+                        padding: 0;
+                        color: $nile-blue;
+
+                        li {
+                            display: block;
+                            font-size: 13px;
+                            line-height: 24px;
+                            font-weight: 500;
+                        }
+
+                        li:before {
+                            content: "• ";
+                        }
+                    }
+
+                    .rate {
+                        color: $nile-blue;
+                        font-weight: bolder;
+                        font-size: 2.5rem;
+                    }
+
+                    .rate-deleted {
+                        color: $nile-blue;
+                        font-size: 1.5rem;
+                    }
+
+                    .slide-content h5 {
+                        font-size: 15px;
+                        color: gray;
+                    }
+
+                    button {
+                        // border: none;
+                        // padding: 0.5rem;
+                        // width: 150px;
+                        background-color: $nile-blue;
+                        border-color: $nile-blue;
+
+                        &:hover {
+                            background-color: transparent;
+                        }
+
+                        // color: $white;
+                        // font-weight: 600;
+                        // font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .room-slider-wrapper .room-carousel {
+        height: 75vh;
+    }
+}
+
+// @media (min-width: 376px) and (max-width: 600px) {
+//     .room-slider-wrapper .room-carousel {
+//         height: 60vh;
+//     }
+// }
+
+@media only screen and (max-width: 600px) {
+    .room-slider-wrapper {
+        .section-title {
+            width: 100%;
+            font-size: 26px;
+        }
+
+        p {
+            font-size: smaller;
+        }
+
+        .room-carousel {
+            // height: 60vh;
+            overflow: hidden;
+
+            .control-arrow {
+                background: rgba($color: $secondary-color, $alpha: 1);
+                opacity: 1;
+                height: 32px;
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: 20%;
+            }
+
+            .control-next {
+                right: 1%;
+            }
+
+            .control-prev {
+                left: 1%;
+            }
+
+            .slider-wrapper {
+                // height: 75vh;
+
+                ul.slider {
+                    transform: translate3d(-45%, 0px, 0px);
+                }
+            }
+
+            ul {
+                li {
+                    .slide-content {
+                        visibility: hidden;
+                    }
+                }
+
+                .selected {
+
+                    // margin: 0 0.125rem;
+                    .room-image-wrapper {
+                        box-shadow: 0 0 8px #bababa;
+                        padding: 0.5rem;
+                    }
+
+                    .slide-content {
+                        visibility: visible;
+
+                        h1,
+                        h2,
+                        h3 {
+                            font-size: 1.1rem;
+                        }
+
+                        ul {
+                            font-size: smaller;
+
+                            li {
+                                display: inline-block;
+                                font-size: 14px;
+                                line-height: 15px;
+                            }
+                        }
+
+                        .rate {
+                            font-size: 1rem;
+                        }
+
+                        .rate-deleted {
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

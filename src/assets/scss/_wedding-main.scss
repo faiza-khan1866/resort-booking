@@ -1,0 +1,254 @@
+.wedding-title-block {
+  .title-flex {
+    flex-direction: row;
+    @media #{$sm} {
+      flex-direction: column-reverse;
+    }
+  }
+  .wedding-title-item {
+    width: 50%;
+    @media #{$sm} {
+      width: 100%;
+    }
+  }
+  h1,
+  h2 {
+    font-family: $lora;
+    // font-style: italic;
+    color: $eden;
+    padding: 0 0 2rem 0;
+    font-weight: 500;
+    @media #{$sm} {
+      font-size: 30px;
+      padding: 0 0 1rem 0;
+    }
+  }
+  p {
+    color: $para-color;
+    font-family: $lora;
+    font-weight: 500;
+    font-size: 14px;
+    @media #{$sm} {
+      text-align: justify;
+    }
+  }
+  .img-wrapper {
+    max-height: 300px;
+    height: 300px;
+    overflow: hidden;
+    @media #{$sm} {
+      max-height: 175px;
+      height: 175px;
+      margin: 0 0 1rem 0;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.wedding-grid-title {
+  font-family: $lora;
+  text-align: center;
+  padding: 2rem 0;
+  font-style: italic;
+}
+
+.wedding-grid-wrapper {
+  // padding-top: 1rem;
+  // text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  .wedding-grid-item-wrapper {
+    padding: 0.75rem;
+    max-width: 50%;
+    min-width: 50%;
+    display: inline-block;
+    @media #{$sm} {
+      max-width: 100%;
+      min-width: 100%;
+      padding: 0.75rem 0;
+    }
+    .grid-item {
+      box-shadow: 0 0 8px #dadada;
+      overflow: hidden;
+      .wedding-title {
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        &:hover {
+          transform: scale(1.2);
+          transition: all 0.4s;
+          z-index: 0;
+        }
+        @media #{$sm} {
+          height: 200px;
+        }
+        h3,
+        h4 {
+          color: $white;
+          font-family: $lora;
+          width: 50%;
+          text-shadow: 0 0 5px #333;
+          z-index: 2;
+          line-height: 30px;
+          @media #{$sm} {
+            width: 75%;
+          }
+        }
+        a {
+          color: $white;
+          margin-top: 2rem;
+          text-decoration: underline;
+        }
+        &:hover {
+          .slide-hover-overlay {
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+          }
+        }
+      }
+      .wedding-description {
+        padding: 1rem;
+        min-height: 220px;
+        max-height: 220px;
+        overflow-y: auto;
+        z-index: 2;
+        position: relative;
+        background-color: $white;
+        @media #{$sm} {
+          min-height: auto;
+          max-height: auto;
+        }
+        p,
+        h2,
+        h3,
+        h4,
+        span {
+          color: $eden;
+          font-weight: 500;
+          font-family: $lora;
+        }
+        span {
+          // text-align: left;
+          font-size: 14px;
+        }
+        h2,
+        h3 {
+          margin: 0.25rem auto;
+        }
+        ul {
+          list-style-type: disc;
+          padding-left: 1rem;
+          li {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wedding-form-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#form-dialog-title {
+  h2 {
+    font-family: $mont;
+    margin: 1rem 0;
+    color: $secondary-color !important;
+    text-align: center;
+    font-size: 23px !important;
+  }
+}
+
+.wedding-form {
+  background-color: rgba($color: $black, $alpha: 0.03);
+  padding: 0.5rem 0;
+  // margin-top: 0.5rem;
+  h3,
+  h4 {
+    font-style: italic;
+    font-family: $lora;
+    margin: 1rem 0;
+    color: $eden;
+  }
+  input,
+  select,
+  textarea {
+    background-color: #fff;
+    height: 40px;
+    border-radius: 4px;
+    padding-left: 20px;
+    padding-right: 10px;
+    // border: 1px solid $eden;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: $text-color !important;
+      opacity: 1 !important;
+    }
+  }
+  // #date-picker-inline::placeholder, .MuiInputBase-input, MuiInputBase-input::placeholder   {
+  //   color: $text-color !important;
+  // }
+  textarea {
+    height: auto;
+    resize: none;
+    padding-top: 10px;
+  }
+  .MuiInputBase-input {
+    color: $text-color;
+    padding: 0 10px 0 20px;
+    border: none;
+  }
+  .MuiFormControl-root {
+    // border: 1px solid $eden;
+    // border-radius: 4px;
+  }
+  .MuiInput-underline::before {
+    border: none !important;
+  }
+
+  .MuiInput-underline::after {
+    border: none !important;
+  }
+
+  .main-btn {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+  form {
+    margin: auto;
+    @media #{$sm} {
+      width: 100%;
+    }
+  }
+}
+
+.submit-btn {
+  background-color: $eden !important;
+  color: $white !important;
+  margin: auto !important;
+  align-self: center !important;
+  margin-right: 1rem !important;
+  width: 100px !important;
+  border-radius: 0 !important;
+  display: block !important;
+}

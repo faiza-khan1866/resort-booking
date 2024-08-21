@@ -1,0 +1,233 @@
+.service-tabs-wrapper {
+  background-color: $white;
+  font-family: "Lora", serif;
+
+  // padding-top: 2rem;
+  .service-tab-panel {
+    position: relative;
+
+    i {
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      z-index: 99;
+      font-size: 28px;
+      font-weight: 300;
+      background-color: rgba($color: #000000, $alpha: 0.4);
+      color: $white;
+      display: inline-block;
+      width: 50px;
+      text-align: center;
+      padding: 0.25rem;
+      cursor: pointer;
+
+      @media #{$sm} {
+        font-size: 20px;
+        width: 40px;
+      }
+
+      &:hover {
+        background-color: rgba($color: #000000, $alpha: 0.6);
+        transition: all 0.3s;
+      }
+
+      &.service-left {
+        left: 0;
+      }
+
+      &.service-right {
+        right: 0;
+      }
+    }
+  }
+
+  .service-tab-panel .MuiBox-root {
+    padding: 0;
+  }
+
+  .MuiTab-root {
+    text-transform: capitalize;
+    font-family: "Lora", serif;
+    font-size: 16px;
+  }
+
+  .MuiTabs-flexContainer {
+    justify-content: space-between;
+  }
+
+  .PrivateTabIndicator-colorSecondary-4 {
+    background-color: #07585c;
+  }
+
+  .MuiTabs-indicator {
+    background-color: #07585c !important;
+    padding: 0.125rem;
+  }
+
+  button.Mui-selected {
+    .MuiTab-wrapper {
+      font-weight: bold;
+      color: #07585c;
+    }
+  }
+
+  button:focus {
+    outline: none !important;
+  }
+
+  #simple-tabpanel-0 {
+    background-color: $white;
+  }
+
+  .main-title {
+    font-family: "Lora", serif;
+    font-style: italic;
+    // color: $secondary-color;
+    margin-bottom: 2rem;
+  }
+
+  .tab-slider {
+    overflow: hidden;
+
+    .slider-image-wrapper-service {
+      position: relative;
+      height: 600px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .hotel-title-wrapper {
+        position: absolute;
+        // bottom: 5%;
+        width: 50%;
+        margin: auto;
+        color: $white;
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        flex-direction: column;
+
+        .hotel-tagline {
+          font-weight: 500;
+          color: $white;
+          font-family: "Lora", serif;
+        }
+
+        .hotel-title {
+          color: $white;
+          width: 50%;
+          font-size: 37px;
+          text-transform: capitalize;
+          font-family: "Lora", serif;
+
+          @media #{$sm} {
+            width: 75%;
+          }
+
+          h1 {
+            color: $white;
+            font-size: 37px;
+            text-transform: capitalize;
+            font-family: "Lora", serif;
+
+            // @media #{$sm} {
+            //   width: 75%;
+            // }
+          }
+        }
+
+        button {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    position: relative;
+
+    h1 {
+      color: $nile-blue;
+      font-style: normal;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      color: $nile-blue;
+
+      li {
+        font-size: 14px;
+        color: gray;
+        display: block;
+      }
+
+      li:before {
+        content: "• ";
+      }
+    }
+
+    button {
+      border: none;
+      background-color: $primary-color;
+      padding: 0.5rem 2rem;
+      bottom: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .service-tabs-wrapper {
+    #simple-tabpanel-0 {
+      background-color: #e2e2e220;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .tab-slider {
+      overflow: hidden;
+      padding: 0;
+
+      .slider-image-wrapper-service {
+        position: relative;
+        height: 500px;
+
+        .hotel-title-wrapper {
+          position: absolute;
+          bottom: 7%;
+          color: $white;
+          font-size: 1rem;
+          text-align: center;
+          width: 100%;
+          background: rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+
+    .tab-content {
+      padding: 0 !important;
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        font-size: smaller;
+      }
+    }
+  }
+}

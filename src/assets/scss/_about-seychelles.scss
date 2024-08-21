@@ -1,0 +1,133 @@
+.seychelles-wrapper {
+  .intro-block,
+  .pillars-block,
+  .projects-block {
+    h2,
+    h3 {
+      color: $eden;
+      font-family: $lora;
+      font-style: italic;
+      text-transform: capitalize;
+      font-size: 28px;
+    }
+    h3 {
+      margin-bottom: 1rem;
+      @media #{$sm} {
+        font-size: 24px;
+      }
+    }
+    h2.main-title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px;
+      @media #{$sm} {
+        font-size: 30px;
+        padding: 0 0 1rem 0;
+      }
+
+    }
+
+    @media #{$sm}{
+      padding: 0.5rem 0 !important;
+    }
+    .title-flex {
+      flex-direction: row;
+      padding-top: 2rem;
+      @media #{$sm} {
+        flex-direction: column-reverse;
+        padding-top: .5rem;
+      }
+    }
+    .intro-item,
+    .pillars-item,
+    .projects-item {
+      width: 50%;
+      @media #{$sm} {
+        width: 100%;
+      }
+      h5,
+      h6 {
+        padding: 1rem 0;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $para-color;
+      }
+    }
+
+    p {
+      color: $para-color;
+      font-family: $lora;
+      font-weight: 500;
+      font-size: 14px;
+      &.download-para{
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+        color: $mine-shaft;
+        font-weight: 600;
+        font-family: $mont;
+      }
+    }
+    .img-wrapper {
+      height: 350px;
+      overflow: hidden;
+      @media #{$sm} {
+        height: 175px;
+        margin: 0 0 1rem 0;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    button {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+      box-shadow: none;
+      margin-top: 2rem;
+      @media #{$sm} {
+        width: 100%;
+      }
+    }
+  }
+
+  //responsivness only
+
+  .pillars-item.img-wrapper {
+    @media #{$sm} {
+      order: 2;
+    }
+  }
+}
+.seyehclles-about-content{
+  background: #be8a7dad;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.seyehclles-about-content h4{
+  font-size:16px;
+  color:white;
+  font-weight: bold;
+  text-align:center;
+  transition: 0.3s all ease-in;
+}
+
+.seyehclles-about-content .col-md-4{
+  cursor: pointer;
+}
+.seyehclles-about-content .col-md-4:hover > h4 {
+color:$secondary-color;
+}
+.seyehclles-about-content p{
+  font-size:14px;
+  color:white !important;
+  text-align:justify;
+  text-align-last:center;
+}
